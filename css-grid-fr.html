@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid fr Unit</title>
+    <style>
+      .container {
+        width: 80vw;
+        height: 50vh;
+        border: 5px solid rgb(161, 93, 230);
+        display: grid;
+        /* grid-template-columns: [fCol]120px [sCol]100px [tCol];
+        grid-template-rows: [fRow]100px [sRow]100px [tRow]100px; */
+
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        /* You can do this too */
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* grid-template-columns: repeat(4, 80px); */
+
+        /* min/max */
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+
+        /* gap: 30px; */
+        row-gap: 10px;
+        column-gap: 30px;
+        justify-items: center;
+        align-items: center;
+        /* place-content: center; */
+        /* place-items: center; */
+      }
+      .item {
+        border: 2px solid red;
+        height: 50px;
+        width: 50px;
+      }
+      .item-1 {
+        /* grid-column: 1/2; */
+        /* grid-row: 1/2; */
+
+        /* or you can do this*/
+        /* grid-row-start: 1;
+        grid-row-end: 2; */
+
+        /* or you can do this too*/
+        /* grid-row: fRow/sRow; */
+      }
+      .item-4 {
+        /* grid-column: 1/2; */
+        /* grid-row: 1/2; */
+        /* grid-row: fRow/sRow; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">1</div>
+      <div class="item item-2">2</div>
+      <div class="item item-3">3</div>
+      <div class="item item-4">4</div>
+      <div class="item item-5">5</div>
+      <div class="item item-6">6</div>
+      <div class="item item-7">7</div>
+    </div>
+  </body>
+</html>
